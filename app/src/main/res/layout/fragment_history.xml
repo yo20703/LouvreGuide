@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HistoryFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/after_create"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="成立博物館前"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="羅浮宮始建於12世紀末（1190年），由法王菲力二世（「奧古斯都」）下令修建，最初是用作監獄與防禦性的城堡，保護巴黎免受到英格蘭王國的襲擊，邊長約90米，四周有城壕，其面積大致相當於今羅浮宮最東端院落的四分之一。當時的羅浮宮堡並不是法國國王的居所，而是被用來存放王室財寶和武器，目前中世紀羅浮宮堡的遺跡在地下室仍然可見。
+「羅浮宮」這個名字的由來有些爭議。根據法國百科全書辭典大拉魯斯百科全書（Grand Larousse encyclopédique）的說法，這個名字來源於與狼狩獵巢穴的聯繫（拉丁語：lupus，下帝國： lupara）。[6] 此後好幾個世紀，羅浮宮發生了很大變化，14世紀，法王查理五世覺得羅浮宮堡比位於塞納河當中之城島（西岱島）的西岱宮更適合居住，於是搬遷至此。在他之後的法國國王再度搬出羅浮宮，直至1546年，弗朗索瓦一世才成為居住在羅浮宮的第二位國王。弗朗索瓦一世除了曾從義大利購買了包括油畫《蒙娜麗莎》在內的大量藝術品外，還將原始的中世紀建築夷為平地，命令建築師皮埃爾·勒柯按照文藝復興風格對其加以改建，於1546年至1559年修建了今日羅浮宮建築群最東端的卡利庭院。擴建工程一直持續到亨利二世登基。亨利二世去世後，王太后凱瑟琳·德·美第奇集中力量修建杜伊勒里宮及杜樂麗花園，對羅浮宮的擴建工作再度停止。
+波旁王朝開始後，亨利四世和路易十三修建了連接羅浮宮與杜伊勒里宮的大長廊，又稱「花廊」（Pavillion de Flore），是當代博物館最著名的展示間。路易十四時期曾令建築師比洛（Claude Perrault）和勒沃（Louis le Vau）對羅浮宮的東立面按照法國文藝復興風格（法國古典主義風格）加以改建，改建工作從1624年持續到1654年。
+1682年法蘭西宮廷移往凡爾賽宮後，羅浮宮的擴建再度終止。路易十四曾計劃放棄羅浮宮，並將其拆除，但後來改變了主意，讓法蘭西學院、紋章院、繪畫和雕塑學院、以及科學院搬入羅浮宮的空房，此外還有一些學者和藝術家被國王邀請住在羅浮宮的一層和大長廊的二樓。1750年法王路易十五正式提出了拆除羅浮宮的計劃。但由於宮廷開支過大，缺乏足夠的金錢來僱傭拆除羅浮宮所需的工人，該宮殿得以倖存，在此時期，法國王室已經收集了約2000幅油畫、150多座雕刻、700多張素描、以及其他大量美術作品。路易十五和路易十六時期繼續從義大利、法蘭德斯和西班牙購入藝術作品。"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>
