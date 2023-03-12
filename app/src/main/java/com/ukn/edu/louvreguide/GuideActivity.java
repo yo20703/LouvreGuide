@@ -1,11 +1,15 @@
 package com.ukn.edu.louvreguide;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -113,5 +117,30 @@ public class GuideActivity extends AppCompatActivity {
                 builder.create().show();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.action_opinion){
+            Intent goOpinion = new Intent(this, OpinionActivity.class);
+            startActivity(goOpinion);
+            return true;
+        }
+
+        if(id == R.id.action_login){
+            Intent goLogin = new Intent(this, LoginActivity.class);
+            startActivity(goLogin);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

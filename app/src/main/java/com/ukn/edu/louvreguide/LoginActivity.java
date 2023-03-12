@@ -1,8 +1,12 @@
 package com.ukn.edu.louvreguide;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,5 +47,30 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.action_guide_service){
+            Intent goGuide = new Intent(this, GuideActivity.class);
+            startActivity(goGuide);
+            return true;
+        }
+
+        if(id == R.id.action_opinion){
+            Intent goOpinion = new Intent(this, OpinionActivity.class);
+            startActivity(goOpinion);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
