@@ -7,7 +7,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.google.android.material.tabs.TabLayout;
 import com.ukn.edu.louvreguide.fragment.HistoryFragment;
@@ -45,6 +48,37 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(myPagerAdapter);
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.action_guide_service){
+            Intent goGuide = new Intent(this, GuideActivity.class);
+            startActivity(goGuide);
+            return true;
+        }
+
+        if(id == R.id.action_opinion){
+            Intent goOpinion = new Intent(this, OpinionActivity.class);
+            startActivity(goOpinion);
+            return true;
+        }
+
+        if(id == R.id.action_login){
+            Intent goLogin = new Intent(this, LoginActivity.class);
+            startActivity(goLogin);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     class MyPagerAdapter extends FragmentPagerAdapter{
